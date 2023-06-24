@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import Constants from 'expo-constants';
+import * as Linking from 'expo-linking';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <ScrollView style={styles.container} contentContainerStyle={{ paddingTop: 70 }}>
+      <Text>Keys: {JSON.stringify(Object.keys(Constants.expoConfig))}</Text>
+      <View style={{ marginTop: 20 }} />
+      <Text>Values: {JSON.stringify(Constants.expoConfig)}</Text>
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
   );
 }
 
@@ -14,7 +18,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

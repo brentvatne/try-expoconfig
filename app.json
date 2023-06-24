@@ -2,6 +2,7 @@
   "expo": {
     "name": "try-expoconfig",
     "slug": "try-expoconfig",
+    "scheme": "hello",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,7 +16,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.brents.try-expoconfig"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +27,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3369eca5-4c0a-4530-b31e-b7ac74ba5831"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/3369eca5-4c0a-4530-b31e-b7ac74ba5831"
     }
   }
 }
